@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4 · Step 3: Complete the First Layer — How to Solve the Rubik's Cube</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <span class="logo"><span class="cube-ico"></span> Rubik's Cube — Step by Step</span>
+  <nav>
+    <a href="index.html">1 Centres &amp; Moves</a>
+    <a href="02-daisy.html">2 Daisy</a>
+    <a href="03-white-cross.html">3 White Cross</a>
+    <a href="04-first-layer.html">4 First Layer</a>
+    <a href="05-second-layer.html">5 Second Layer</a>
+    <a href="06-fish-cross.html">6 Fish / Cross</a>
+    <a href="07-yellow-side.html">7 Full Yellow</a>
+    <a href="08-next-algorithm.html">8 Next</a>
+    <a href="09-last-algorithm.html">9 Last</a>
+  </nav>
+</header>
+
+<main>
+  <p class="eyebrow">Step 3 · Page 4 of 9</p>
+  <h1>Complete the first layer</h1>
+  <p class="lead">Now the four white corners go in, using one short algorithm — from the right or from the
+  left, depending on where the corner's slot is.</p>
+
+  <div class="card goal">
+    <b>Goal:</b> the whole <b>bottom face is white</b>, and the bottom row of every side face matches its
+    centre. That is the whole first layer finished.
+  </div>
+
+  <div class="card">
+    <h3>Hold the cube like this</h3>
+    <p><b>White centre down</b>, yellow centre up. The white cross you just made stays on the bottom the whole
+    time.</p>
+    <ol class="steps">
+      <li>Find a <b>white corner</b> in the <b>top layer</b> (a piece with a white sticker and two other
+          colours).</li>
+      <li>Turn the top (<code>T</code>) so that corner sits <b>directly above the slot where it belongs</b> —
+          the corner whose two side colours match the two centres it touches.</li>
+      <li>Look at which side the corner needs to go down:</li>
+    </ol>
+    <div class="grid2">
+      <div>
+        <h3>Right side → <span class="pill">R T1 R1</span></h3>
+        <div class="alg" id="alg-right"></div>
+        <p class="face-cap">Right, top reverse, right reverse.</p>
+      </div>
+      <div>
+        <h3>Left side → <span class="pill">L T L1</span></h3>
+        <div class="alg" id="alg-left"></div>
+        <p class="face-cap">Left, top, left reverse.</p>
+      </div>
+    </div>
+    <p>Repeat the right algorithm (or the left one) until the corner is sitting in its slot with
+    <b>white facing down</b>. Then do the next corner, and the next, until all four are in.</p>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>Finished first layer</h3>
+      <div class="grid2">
+        <div class="face-wrap">
+          <div class="face" id="f-down"></div>
+          <div class="face-cap"><b>Bottom face</b> — all white</div>
+        </div>
+        <div class="face-wrap">
+          <div class="face" id="f-front"></div>
+          <div class="face-cap"><b>Front face</b> — bottom row solved</div>
+        </div>
+      </div>
+    </div>
+    <div class="card tip">
+      <b>Good to know.</b> You may need to run the algorithm two, three or even five times for one corner.
+      That is normal — keep the same corner above its slot and keep going. If a white corner is stuck in the
+      bottom layer but in the wrong place, do the algorithm once to send it up, then place it properly.
+    </div>
+  </div>
+
+  <div class="steps-nav">
+    <a class="ghost" href="03-white-cross.html">← Step 2: The White Cross</a>
+    <a href="05-second-layer.html">Step 4: The Upside-Down T →</a>
+  </div>
+</main>
+
+<script src="cube.js"></script>
+<script>
+  drawFace("#f-down", "wwwwwwwww", [4]);
+  drawFace("#f-front", "xxxxgxggg", [6,7,8]);
+  drawAlg("#alg-right", "R T1 R1");
+  drawAlg("#alg-left", "L T L1");
+</script>
+</body>
+</html>

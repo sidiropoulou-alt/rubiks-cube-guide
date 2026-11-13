@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2 · Step 1: The Daisy — How to Solve the Rubik's Cube</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <span class="logo"><span class="cube-ico"></span> Rubik's Cube — Step by Step</span>
+  <nav>
+    <a href="index.html">1 Centres &amp; Moves</a>
+    <a href="02-daisy.html">2 Daisy</a>
+    <a href="03-white-cross.html">3 White Cross</a>
+    <a href="04-first-layer.html">4 First Layer</a>
+    <a href="05-second-layer.html">5 Second Layer</a>
+    <a href="06-fish-cross.html">6 Fish / Cross</a>
+    <a href="07-yellow-side.html">7 Full Yellow</a>
+    <a href="08-next-algorithm.html">8 Next</a>
+    <a href="09-last-algorithm.html">9 Last</a>
+  </nav>
+</header>
+
+<main>
+  <p class="eyebrow">Step 1 · Page 2 of 9</p>
+  <h1>The Daisy</h1>
+  <p class="lead">Four white edges around the yellow centre. That flower shape is called the daisy, and it is
+  the easiest way to start.</p>
+
+  <div class="card goal">
+    <b>Goal:</b> hold the cube with the <b>yellow centre on top</b>, and bring the <b>four white edges</b> up
+    next to it. The top then looks like a flower: yellow middle, four white petals.
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>What it looks like</h3>
+      <div class="face-wrap">
+        <div class="face" id="f-top"></div>
+        <div class="face-cap"><b>Top face</b> — yellow centre, white petals</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>How to build it</h3>
+      <ol class="steps">
+        <li>Turn the cube so the <b>yellow centre is on top</b>.</li>
+        <li>Look for a <b>white edge</b> (a piece with a white sticker and one other colour).</li>
+        <li>If it is in the <b>bottom layer</b>, turn that side face <b>twice</b> (<code>R R</code>, <code>F F</code>,
+            <code>L L</code> or <code>B B</code>) to bring the white sticker up to the top.</li>
+        <li>If it is already in the top layer but not next to the yellow centre, turn the top
+            (<code>T</code>) until it is free, then fix the piece you need.</li>
+        <li>Repeat until all <b>four</b> white edges sit around the yellow centre.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card tip">
+    <b>Don't worry about the sides yet.</b> On the daisy the petals' side colours can point anywhere. You fix
+    that in the next step. Right now only two things matter: yellow centre up, four white edges around it.
+  </div>
+
+  <div class="card note">
+    <b>Watch out:</b> if a white edge is already in the top layer, turning the top (<code>T</code>) moves it
+    around the yellow centre without breaking the petals you already placed.
+  </div>
+
+  <div class="steps-nav">
+    <a class="ghost" href="index.html">← Centres &amp; Moves</a>
+    <a href="03-white-cross.html">Step 2: The White Cross →</a>
+  </div>
+</main>
+
+<script src="cube.js"></script>
+<script>drawFace("#f-top", "xwxwywxwx", [4]);</script>
+</body>
+</html>

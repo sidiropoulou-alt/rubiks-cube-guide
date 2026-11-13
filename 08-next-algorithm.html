@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>8 · Step 7: Next Algorithm — How to Solve the Rubik's Cube</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <span class="logo"><span class="cube-ico"></span> Rubik's Cube — Step by Step</span>
+  <nav>
+    <a href="index.html">1 Centres &amp; Moves</a>
+    <a href="02-daisy.html">2 Daisy</a>
+    <a href="03-white-cross.html">3 White Cross</a>
+    <a href="04-first-layer.html">4 First Layer</a>
+    <a href="05-second-layer.html">5 Second Layer</a>
+    <a href="06-fish-cross.html">6 Fish / Cross</a>
+    <a href="07-yellow-side.html">7 Full Yellow</a>
+    <a href="08-next-algorithm.html">8 Next</a>
+    <a href="09-last-algorithm.html">9 Last</a>
+  </nav>
+</header>
+
+<main>
+  <p class="eyebrow">Step 7 · Page 8 of 9 · Document algorithm</p>
+  <h1>Next algorithm — line up the top corners</h1>
+  <p class="lead">The top face is yellow, but the corners on the sides are still in the wrong places. This
+  algorithm swaps corners around until every corner sits where it belongs.</p>
+
+  <div class="card goal">
+    <b>Goal:</b> every <b>top corner is in its correct place</b> — its three colours match the three faces
+    they touch. (The top face stays yellow throughout.)
+  </div>
+
+  <div class="card">
+    <h3>The algorithm <span class="pill doc">from the document</span></h3>
+    <div class="alg" id="alg"></div>
+    <p class="face-cap">Left, top reverse, right reverse, top, left reverse, top twice, right, top reverse,
+    right reverse, top twice, right.</p>
+    <p>Eleven moves (thirteen letters in the sheet's notation, because <code>T T</code> is one double turn).
+    It swaps <b>two corners</b> of the top layer — the two on the right — and, as a side effect, two top
+    edges.</p>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>How to use it</h3>
+      <ol class="steps">
+        <li>Keep the <b>yellow face on top</b>.</li>
+        <li>Look at the top corners and find the <b>two that need to change places</b>.</li>
+        <li>Turn the cube so those two corners are on the <b>right</b> side, then run the algorithm.</li>
+        <li>Check again. Turn the top (<code>T</code>) to bring the corners you still need to swap to the
+            right, and run it again.</li>
+        <li>Stop when all four top corners are in their correct places.</li>
+      </ol>
+    </div>
+    <div class="card">
+      <h3>How to tell a corner is “correct”</h3>
+      <p>Look at one corner of the top layer. It has three stickers. The corner is in the right place when its
+      three colours are the same as the <b>three centres</b> around it — for example yellow, green and red on
+      the corner between the yellow, green and red faces.</p>
+      <p class="face-cap">The corner may still be <b>twisted</b> — that is fine here, because the whole top
+      face is already yellow.</p>
+    </div>
+  </div>
+
+  <div class="card note">
+    <b>Note on the sheet.</b> This page and the last one come from a handwritten sheet, so the moves were
+    read carefully and each algorithm was checked on a cube model to make sure it leaves the finished layers
+    alone. If your cube ever looks worse after a run, check you did the <b>whole</b> sequence — most mistakes
+    are a missed or reversed turn.
+  </div>
+
+  <div class="steps-nav">
+    <a class="ghost" href="07-yellow-side.html">← Step 6: Full Yellow Side</a>
+    <a href="09-last-algorithm.html">Step 8: Last Algorithm →</a>
+  </div>
+</main>
+
+<script src="cube.js"></script>
+<script>drawAlg("#alg", "L T1 R1 T L1 T T R T1 R1 T T R");</script>
+</body>
+</html>

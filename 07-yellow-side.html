@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7 · Step 6: Full Yellow Side — How to Solve the Rubik's Cube</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <span class="logo"><span class="cube-ico"></span> Rubik's Cube — Step by Step</span>
+  <nav>
+    <a href="index.html">1 Centres &amp; Moves</a>
+    <a href="02-daisy.html">2 Daisy</a>
+    <a href="03-white-cross.html">3 White Cross</a>
+    <a href="04-first-layer.html">4 First Layer</a>
+    <a href="05-second-layer.html">5 Second Layer</a>
+    <a href="06-fish-cross.html">6 Fish / Cross</a>
+    <a href="07-yellow-side.html">7 Full Yellow</a>
+    <a href="08-next-algorithm.html">8 Next</a>
+    <a href="09-last-algorithm.html">9 Last</a>
+  </nav>
+</header>
+
+<main>
+  <p class="eyebrow">Step 6 · Page 7 of 9 · Document algorithm</p>
+  <h1>Full yellow side</h1>
+  <p class="lead">The cross is there; now the four corners get their yellow stickers facing up, until the whole
+  top face is yellow.</p>
+
+  <div class="card goal">
+    <b>Goal:</b> the <b>entire top face is yellow</b>. The sides may still look scrambled — that is fine, we
+    fix them on the last two pages.
+  </div>
+
+  <div class="card">
+    <h3>The algorithm <span class="pill doc">from the document</span></h3>
+    <div class="alg" id="alg"></div>
+    <p class="face-cap">Right, top, right reverse, top, right, top twice, right reverse.</p>
+    <p>This is a very well-known little algorithm (cubers call it the <b>Sune</b>). It twists the yellow
+    corners without spoiling the cross.</p>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>How to use it</h3>
+      <ol class="steps">
+        <li>Hold the cube with the <b>yellow cross on top</b>.</li>
+        <li>Look at the top face. Find the corner that already shows <b>yellow on top</b>, and turn the top
+            (<code>T</code>) so that corner sits at the <b>front-left</b> (the top-left of the front face).</li>
+        <li>Run the algorithm once and look again.</li>
+        <li>Still not all yellow? Turn the top so a corner that is not yet yellow sits in that same
+            front-left spot, and run it again.</li>
+        <li>Repeat until <b>all four</b> corners show yellow on top.</li>
+      </ol>
+    </div>
+    <div class="card">
+      <h3>Finished top face</h3>
+      <div class="face-wrap">
+        <div class="face" id="f-top"></div>
+        <div class="face-cap"><b>Top face</b> — all yellow</div>
+      </div>
+      <p class="face-cap">It may take two or three runs, and the top may need re-turning between runs.</p>
+    </div>
+  </div>
+
+  <div class="card note">
+    <b>Don't panic</b> if the cube looks messy on the sides while you do this — the Sune always puts the first
+    two layers back when the sequence is finished. Do the <b>whole</b> algorithm, then look.
+  </div>
+
+  <div class="steps-nav">
+    <a class="ghost" href="06-fish-cross.html">← Step 5: Fish / Cross</a>
+    <a href="08-next-algorithm.html">Step 7: Next Algorithm →</a>
+  </div>
+</main>
+
+<script src="cube.js"></script>
+<script>
+  drawAlg("#alg", "R T R1 T R T T R1");
+  drawFace("#f-top", "yyyyyyyyy", [4]);
+</script>
+</body>
+</html>

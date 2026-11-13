@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5 · Step 4: The Upside-Down T — How to Solve the Rubik's Cube</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <span class="logo"><span class="cube-ico"></span> Rubik's Cube — Step by Step</span>
+  <nav>
+    <a href="index.html">1 Centres &amp; Moves</a>
+    <a href="02-daisy.html">2 Daisy</a>
+    <a href="03-white-cross.html">3 White Cross</a>
+    <a href="04-first-layer.html">4 First Layer</a>
+    <a href="05-second-layer.html">5 Second Layer</a>
+    <a href="06-fish-cross.html">6 Fish / Cross</a>
+    <a href="07-yellow-side.html">7 Full Yellow</a>
+    <a href="08-next-algorithm.html">8 Next</a>
+    <a href="09-last-algorithm.html">9 Last</a>
+  </nav>
+</header>
+
+<main>
+  <p class="eyebrow">Step 4 · Page 5 of 9</p>
+  <h1>The upside-down T — solving the second layer</h1>
+  <p class="lead">The first layer stays solved and we fill in the four edges of the middle layer. The trick is
+  to make an <b>upside-down T</b> first, then drop the edge in.</p>
+
+  <div class="card goal">
+    <b>Goal:</b> the <b>bottom two layers finished</b> — first layer plus the four middle edges, with every
+    side face's bottom two rows matching its centre.
+  </div>
+
+  <div class="card">
+    <h3>Find an edge with no yellow</h3>
+    <p>The middle-layer edges are the four edges that have <b>no yellow sticker</b>. Look for one in the
+    <b>top layer</b> and turn the top (<code>T</code>) until its side colour matches the centre under it.
+    Now the edge, the centre and the solved bottom row line up into a <b>T shape pointing down</b>.</p>
+    <div class="grid2">
+      <div class="face-wrap">
+        <div class="face" id="f-t"></div>
+        <div class="face-cap"><b>Front face</b> — the upside-down T</div>
+      </div>
+      <div>
+        <p>Then check the edge's <b>other</b> colour — the one on top. That tells you which way the edge must
+        travel:</p>
+        <ul>
+          <li>if it has to go to the <b>right</b>, use the <b>right</b> algorithm;</li>
+          <li>if it has to go to the <b>left</b>, use the <b>left</b> algorithm.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>Send it right → <span class="pill">T R T1 R1 · T1 F1 T F</span></h3>
+      <div class="alg" id="alg-right"></div>
+      <p class="face-cap">Top, right, top reverse, right reverse — top reverse, front reverse, top, front.</p>
+    </div>
+    <div class="card">
+      <h3>Send it left → <span class="pill">T1 L1 T L · T F T1 F1</span></h3>
+      <div class="alg" id="alg-left"></div>
+      <p class="face-cap">Top reverse, left reverse, top, left — top, front, top reverse, front reverse.</p>
+    </div>
+  </div>
+
+  <div class="card note">
+    <b>Stuck edge?</b> Sometimes a middle-layer edge is already in the middle layer but the wrong way round.
+    Hold it on the right and run the <b>right</b> algorithm once — that pops it out to the top. Then make the
+    upside-down T and insert it properly.
+  </div>
+
+  <div class="card tip">
+    <b>Repeat</b> for all four middle edges. When you finish, the bottom two layers are complete and only the
+    top layer is left.
+  </div>
+
+  <div class="steps-nav">
+    <a class="ghost" href="04-first-layer.html">← Step 3: First Layer</a>
+    <a href="06-fish-cross.html">Step 5: Fish / Cross →</a>
+  </div>
+</main>
+
+<script src="cube.js"></script>
+<script>
+  drawFace("#f-t", "xxgxgxggg", [1,4]);
+  drawAlg("#alg-right", "T R T1 R1 T1 F1 T F");
+  drawAlg("#alg-left", "T1 L1 T L T F T1 F1");
+</script>
+</body>
+</html>

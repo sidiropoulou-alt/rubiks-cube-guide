@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1 · Centres &amp; Moves — How to Solve the Rubik's Cube</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <span class="logo"><span class="cube-ico"></span> Rubik's Cube — Step by Step</span>
+  <nav>
+    <a href="index.html">1 Centres &amp; Moves</a>
+    <a href="02-daisy.html">2 Daisy</a>
+    <a href="03-white-cross.html">3 White Cross</a>
+    <a href="04-first-layer.html">4 First Layer</a>
+    <a href="05-second-layer.html">5 Second Layer</a>
+    <a href="06-fish-cross.html">6 Fish / Cross</a>
+    <a href="07-yellow-side.html">7 Full Yellow</a>
+    <a href="08-next-algorithm.html">8 Next</a>
+    <a href="09-last-algorithm.html">9 Last</a>
+  </nav>
+</header>
+
+<main>
+  <p class="eyebrow">Page 1 of 9</p>
+  <h1>Know your cube: the centres and the moves</h1>
+  <p class="lead">Before you turn anything, learn the six centres and the six moves. Everything else in this
+  guide is written in these moves.</p>
+
+  <h2>Where the centres are</h2>
+  <div class="card">
+    <p>A cube has <b>6 faces</b>. In the middle of every face there is a <b>centre</b> — one square, and it
+    <b>never leaves its face</b>, no matter how you turn the cube. That is why the centre tells you what colour
+    the whole face must become.</p>
+    <div class="grid2">
+      <div class="face-wrap">
+        <div class="net" id="net"></div>
+        <div class="face-cap">The cube unfolded. Each <b>centre</b> is the middle square of its face.</div>
+      </div>
+      <div>
+        <ul>
+          <li><b>Top (T)</b> — the face pointing up. In this guide we hold the cube with the
+              <b>yellow centre on top</b> when we build the daisy.</li>
+          <li><b>Bottom (D)</b> — the face pointing down.</li>
+          <li><b>Front (F)</b> — the face looking at you.</li>
+          <li><b>Back (B)</b> — the face away from you.</li>
+          <li><b>Right (R)</b> — the face on your right hand.</li>
+          <li><b>Left (L)</b> — the face on your left hand.</li>
+        </ul>
+        <p class="pill">Tip</p>
+        <p>Hold the cube the same way every time: front towards you, top up. If you turn the whole cube,
+        “front” and “right” turn with it.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>All the moves</h2>
+  <div class="card">
+    <p>Each move turns <b>one face</b> a quarter turn (90°). A letter on its own means turn that face
+    <b>clockwise</b> — clockwise as you look straight at that face. A small <b>1</b> (or an apostrophe, <b>'</b>)
+    means turn it the <b>other way</b>. A <b>2</b> — or the letter written twice — means turn it <b>twice</b>.</p>
+    <p class="pill doc">Document notation</p>
+    <p>The sheet this guide comes from writes <b>T</b> for the top face and <b>1</b> for a reverse turn, so
+    <code>T1</code> is the same as <code>U'</code>. Both are shown below.</p>
+    <table class="moves">
+      <tr><th>Move</th><th>Meaning</th></tr>
+      <tr><td><code>R</code></td><td>Right face, clockwise</td></tr>
+      <tr><td><code>R1</code> &nbsp;(R')</td><td>Right face, anti-clockwise</td></tr>
+      <tr><td><code>L</code></td><td>Left face, clockwise</td></tr>
+      <tr><td><code>L1</code> &nbsp;(L')</td><td>Left face, anti-clockwise</td></tr>
+      <tr><td><code>T</code> &nbsp;(U)</td><td>Top face, clockwise</td></tr>
+      <tr><td><code>T1</code> &nbsp;(T' / U')</td><td>Top face, anti-clockwise</td></tr>
+      <tr><td><code>F</code></td><td>Front face, clockwise</td></tr>
+      <tr><td><code>F1</code> &nbsp;(F')</td><td>Front face, anti-clockwise</td></tr>
+      <tr><td><code>B</code></td><td>Back face, clockwise</td></tr>
+      <tr><td><code>B1</code> &nbsp;(B')</td><td>Back face, anti-clockwise</td></tr>
+      <tr><td><code>D</code></td><td>Bottom face, clockwise</td></tr>
+      <tr><td><code>D1</code> &nbsp;(D')</td><td>Bottom face, anti-clockwise</td></tr>
+      <tr><td><code>R R</code> &nbsp;(R2)</td><td>Any face twice = half a turn</td></tr>
+    </table>
+    <h3>Reading an algorithm</h3>
+    <p>An algorithm is just a list of moves, read left to right. For example:</p>
+    <div class="alg" id="demo"></div>
+    <p class="face-cap">…is: right, top reverse, right reverse. You will meet it on page 4.</p>
+  </div>
+
+  <div class="card tip">
+    <b>What comes next.</b> Pages 2–9 build the cube one layer at a time: daisy → white cross → first layer →
+    second layer → fish/cross → full yellow side → next algorithm → last algorithm.
+  </div>
+
+  <div class="steps-nav">
+    <span class="spacer"></span>
+    <a href="02-daisy.html">Step 1: The Daisy →</a>
+  </div>
+</main>
+
+<script src="cube.js"></script>
+<script>
+  drawNet("#net", {
+    U: "xxxxwxxxx", R: "xxxxrxxxx", F: "xxxxgxxxx",
+    L: "xxxxoxxxx", B: "xxxxbxxxx", D: "xxxxyxxxx"
+  }, ["U4","R4","F4","L4","B4","D4"]);
+  drawAlg("#demo", "R T' R'");
+</script>
+</body>
+</html>

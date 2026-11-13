@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>9 · Step 8: Last Algorithm — How to Solve the Rubik's Cube</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <span class="logo"><span class="cube-ico"></span> Rubik's Cube — Step by Step</span>
+  <nav>
+    <a href="index.html">1 Centres &amp; Moves</a>
+    <a href="02-daisy.html">2 Daisy</a>
+    <a href="03-white-cross.html">3 White Cross</a>
+    <a href="04-first-layer.html">4 First Layer</a>
+    <a href="05-second-layer.html">5 Second Layer</a>
+    <a href="06-fish-cross.html">6 Fish / Cross</a>
+    <a href="07-yellow-side.html">7 Full Yellow</a>
+    <a href="08-next-algorithm.html">8 Next</a>
+    <a href="09-last-algorithm.html">9 Last</a>
+  </nav>
+</header>
+
+<main>
+  <p class="eyebrow">Step 8 · Page 9 of 9 · Document algorithm</p>
+  <h1>Last algorithm — the final turn</h1>
+  <p class="lead">Everything is in place except the four top edges. One more algorithm cycles them round and
+  the cube is solved.</p>
+
+  <div class="card goal">
+    <b>Goal:</b> the <b>whole cube solved</b>. After this step there is nothing left to do.
+  </div>
+
+  <div class="card">
+    <h3>The algorithm <span class="pill doc">from the document</span></h3>
+    <div class="alg" id="alg"></div>
+    <p class="face-cap">Front twice, top, left, right reverse, front twice, left reverse, right, top, front
+    twice.</p>
+    <p>This one <b>cycles three top edges</b> around: the edge at the front goes to the left, the left edge
+    goes to the right, and the right edge comes to the front. The corners stay put.</p>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>How to use it</h3>
+      <ol class="steps">
+        <li>Keep the <b>yellow face on top</b>.</li>
+        <li>Find a top edge that is already in its correct place (its two colours match the two centres it
+            touches).</li>
+        <li>Hold the cube so that correct edge is at the <b>back</b>.</li>
+        <li>Run the algorithm and look at the top again.</li>
+        <li>If the edges are still not all home, turn the cube so a correct edge is at the back and run it
+            once more.</li>
+      </ol>
+    </div>
+    <div class="card">
+      <h3>Solved!</h3>
+      <div class="face-wrap">
+        <div class="face" id="f-top"></div>
+        <div class="face-cap"><b>Top face</b> — all yellow, everything lined up</div>
+      </div>
+      <p class="face-cap">White cross and corners below, all four sides matching their centres, yellow on top.
+      Well done.</p>
+    </div>
+  </div>
+
+  <div class="card tip">
+    <b>If the edges will not line up</b> after two runs, do the algorithm once more from a different holding —
+    you may have started with no edge in the right place. The cycle always lands the cube on solved within a
+    couple of runs.
+  </div>
+
+  <div class="card note">
+    <b>Reading the sheet.</b> The last two algorithms come from a handwritten sheet and were the hardest to
+    read. Both were checked on a cube model: this one cycles three top edges and keeps everything else intact.
+  </div>
+
+  <div class="steps-nav">
+    <a class="ghost" href="08-next-algorithm.html">← Step 7: Next Algorithm</a>
+    <a href="index.html">Back to Page 1: Centres &amp; Moves</a>
+  </div>
+</main>
+
+<script src="cube.js"></script>
+<script>
+  drawAlg("#alg", "F F T L R1 F F L1 R T F F");
+  drawFace("#f-top", "yyyyyyyyy", [4]);
+</script>
+</body>
+</html>

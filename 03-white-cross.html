@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3 · Step 2: The White Cross — How to Solve the Rubik's Cube</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <span class="logo"><span class="cube-ico"></span> Rubik's Cube — Step by Step</span>
+  <nav>
+    <a href="index.html">1 Centres &amp; Moves</a>
+    <a href="02-daisy.html">2 Daisy</a>
+    <a href="03-white-cross.html">3 White Cross</a>
+    <a href="04-first-layer.html">4 First Layer</a>
+    <a href="05-second-layer.html">5 Second Layer</a>
+    <a href="06-fish-cross.html">6 Fish / Cross</a>
+    <a href="07-yellow-side.html">7 Full Yellow</a>
+    <a href="08-next-algorithm.html">8 Next</a>
+    <a href="09-last-algorithm.html">9 Last</a>
+  </nav>
+</header>
+
+<main>
+  <p class="eyebrow">Step 2 · Page 3 of 9</p>
+  <h1>Align the centres and make the white cross</h1>
+  <p class="lead">Take the daisy and fold each white petal down to the bottom, so the white cross appears —
+  with every side colour matching its centre.</p>
+
+  <div class="card goal">
+    <b>Goal:</b> a <b>white cross on the bottom face</b>, where each white edge's other colour sits directly
+    under the centre of the same colour.
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>What it looks like</h3>
+      <div class="grid2">
+        <div class="face-wrap">
+          <div class="face" id="f-down"></div>
+          <div class="face-cap"><b>Bottom face</b> — white cross</div>
+        </div>
+        <div class="face-wrap">
+          <div class="face" id="f-front"></div>
+          <div class="face-cap"><b>Front face</b> — white edge under the green centre</div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>The move</h3>
+      <ol class="steps">
+        <li>Keep the <b>yellow centre on top</b> and the white petals around it.</li>
+        <li>Pick one petal. Look at its <b>side colour</b>.</li>
+        <li>Turn the <b>top</b> (<code>T</code> or <code>T1</code>) until that side colour is
+            <b>above the centre of the same colour</b>. Now the petal and the centre line up.</li>
+        <li>Turn <b>that face twice</b> — <code>F F</code>, <code>R R</code>, <code>B B</code> or <code>L L</code> —
+            and the white sticker drops to the bottom.</li>
+        <li>Do the same for the other <b>three</b> petals.</li>
+      </ol>
+      <div class="alg" id="alg"></div>
+      <p class="face-cap">Example: line the petal up, then turn the front twice.</p>
+    </div>
+  </div>
+
+  <div class="card tip">
+    <b>Why the centre matters here.</b> The centres never move, so “match the petal to the centre” is really
+    “put the edge where it belongs”. If you skip this, the cross will be white but the side colours will be
+    in the wrong places.
+  </div>
+
+  <div class="card note">
+    <b>Check:</b> with the cube white-side-down, look at each side face. Its bottom edge should be white on
+    the bottom and the side colour should join the centre above it.
+  </div>
+
+  <div class="steps-nav">
+    <a class="ghost" href="02-daisy.html">← Step 1: The Daisy</a>
+    <a href="04-first-layer.html">Step 3: First Layer →</a>
+  </div>
+</main>
+
+<script src="cube.js"></script>
+<script>
+  drawFace("#f-down", "xwxwwwxwx", [4]);
+  drawFace("#f-front", "xxxgxxwx", [7]);
+  drawAlg("#alg", "F F");
+</script>
+</body>
+</html>
